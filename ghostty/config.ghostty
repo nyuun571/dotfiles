@@ -1,0 +1,128 @@
+# =====================================
+# Ghostty config
+# ~/.config/ghostty/config.ghostty
+# =====================================
+
+# =====================================
+# Font
+# =====================================
+
+font-family = "Roroit FX"
+font-size = 15
+
+# 行間を少しだけ広げる
+adjust-cell-height = 5%
+
+# =====================================
+# Theme / Colors
+# =====================================
+
+# 好みのGhostty内蔵テーマを使う場合
+# ghostty +list-themes で一覧確認
+theme = "Arthur"
+foreground = #cdd6f4
+background = #1e1e2e
+
+
+# ========================================
+# Transparency
+# ========================================
+
+# 1.0 = 不透明
+# 0.0 = 完全透明
+background-opacity = 0.70
+
+# 背景を少しぼかす
+background-blur = 0
+
+# Neovimなどがセル背景色を描画しても透過させる
+background-opacity-cells = false
+
+# 薄い色(faint)テキストの透明度を指定
+faint-opacity = 
+
+# ========================================
+# Window
+# ========================================
+
+# 端に文字がくっつかないように余白
+window-padding-x = 10
+window-padding-y = 8
+
+# 余った余白を左右上下で均等化
+window-padding-balance = true
+
+# macOSのタイトルバー
+macos-titlebar-style = tabs
+
+macos-titlebar-proxy-icon = hidden
+
+# =====================================
+# Mouse
+# =====================================
+
+mouse-hide-while-typing = true
+
+# ========================================
+# Cursor
+# ========================================
+
+cursor-style = bar
+cursor-style-blink = false
+
+# ========================================
+# macOS / Keyboard
+# ========================================
+
+# OptionをAltとして使用
+# NeovimやCLIツールで便利
+macos-option-as-alt = true
+
+# ========================================
+# Working Directory
+# ========================================
+
+# 新しいタブで現在のディレクトリを引き継ぐ
+tab-inherit-working-directory = true
+
+# splitでも現在のディレクトリを引き継ぐ
+split-inherit-working-directory = true
+
+# 新規ウィンドウでも引き継ぐ
+window-inherit-working-directory = true
+
+# ========================================
+# Split
+# ========================================
+
+# 非アクティブPaneを少し暗く
+unfocused-split-opacity = 0.92
+
+# Vim風のPane移動
+keybind = cmd+alt+h=goto_split:left
+keybind = cmd+alt+j=goto_split:down
+keybind = cmd+alt+k=goto_split:up
+keybind = cmd+alt+l=goto_split:right
+
+# 現在のPaneを最大化 / 戻す
+keybind = cmd+alt+enter=toggle_split_zoom
+
+# ========================================
+# Copy mode
+# ========================================
+
+keybind = cmd+shift+space=activate_key_table:copy
+
+# 終了
+keybind = copy/escape=deactivate_key_table
+keybind = copy/q=deactivate_key_table
+
+# スクロール
+keybind = copy/j=scroll_page_lines:1
+keybind = copy/k=scroll_page_lines:-1
+
+keybind = copy/g=scroll_to_top
+keybind = copy/shift+g=scroll_to_bottom
+
+# コピー
+keybind = copy/y=copy_to_clipboard

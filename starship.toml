@@ -1,0 +1,136 @@
+# エディターの補完を設定スキーマに合わせて取得
+"$schema" = 'https://starship.rs/config-schema.json'
+
+format = """
+$directory\
+$git_branch\
+$git_status\
+$fill\
+$cmd_duration\
+$os\
+$shell\
+$rust\
+$golang\
+$c\
+$cpp\
+$python\
+$time
+$character\
+"""
+
+palette = 'plant'
+
+[palettes.plant]
+color_bg0 = '#313244'
+color_bg1 = '#272e33'
+color_gray0 = '#7A8478'
+color_gray1 = '#a3aed2'
+color_bule0 = '#89b4fa'
+color_bule1 = '#769ff0'
+color_red = '#e67e80'
+color_orange = '#e69875'
+color_yellow = '#fbf1c7'
+color_gold = '#FFD700'
+color_green = '#86BBD8'
+color_aqua = '#83C092'
+color_white = '#E1D9D1'
+color_accent = '#d700d7'
+color_lavender = '#E6E6FA'
+color_pureblue = '#b4befe'
+color_dart = '#140'
+
+
+# 140でいい紫？
+
+[os.symbols]
+Macos = "  "
+Windows = "󰍲 "
+Linux = " 󰌽 "
+Ubuntu = " "
+Debian = "  "
+
+[os]
+disabled = false
+format = "[$symbol ]($style)"
+style = "fg:#787c99"
+
+[shell]
+bash_indicator = ' '
+fish_indicator = '󰈺 '
+powershell_indicator = '_'
+unknown_indicator = 'mystery shell'
+style = 'fg:#607060'
+format = '[$indicator]($style)'
+disabled = false
+
+[directory]
+style = 'fg:color_bule1'
+format = "[$path ]($style)"
+truncation_length = 3
+truncation_symbol = "…/"
+
+[fill]
+symbol = " "
+# style = 'bold color_gray0'
+
+[git_branch]
+symbol = ""
+style = 'fg:color_orange'
+format = '[$symbol $branch ]($style)'
+
+[git_status]
+style = "bg:color_orange"
+format = '[[($all_status$ahead_behind )](fg:color_orange)]($style)'
+
+[git_metrics]
+disabled = false
+
+[rust]
+symbol = " "
+version_format = '${major}.${minor}'
+style = '#DEA584'
+format = '[$symbol($version )]($style)'
+
+[lua]
+symbol = " "
+
+[golang]
+symbol = " "
+style = "fg:#769ff0"
+format = '[ $symbol ($version) ]($style)'
+
+[c]
+symbol = ' '
+style = 'fg:#A8B9CC'
+version_format = '${major}'
+format = '[$symbol($version(-$name)) ]($style)'
+
+[cpp]
+disabled = false
+symbol = " "
+style ='fg:#00599C'
+version_format = '${major}'
+format = '[$symbol($version(-$name)) ]($style)'
+
+[python]
+symbol = ' '
+style = 'fg:#3776AB'
+version_format = '${major}.${minor}'
+format = '[${symbol}${pyenv_prefix}(${version})(\($virtualenv\) )]($style)'
+
+[time]
+disabled = false
+time_format = '%R'
+style = 'yellow'
+format = '[$time]($style)'
+
+[cmd_duration]
+disabled = false
+show_milliseconds = true
+format = " $duration"
+style = "bg:color_lavender"
+
+[character]
+disabled = false
+success_symbol = '[](bold fg:color_aqua)'
+error_symbol = '[>](bold fg:color_red)'

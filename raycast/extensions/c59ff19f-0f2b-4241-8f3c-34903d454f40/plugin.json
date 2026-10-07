@@ -1,0 +1,9 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "raycast-system-monitor",
+  "description": "Show information and usage related to CPU, memory, power, network and temperature",
+  "author": {
+    "name": "hossammourad"
+  },
+  "license": "MIT"
+}
