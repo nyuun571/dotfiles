@@ -1,0 +1,110 @@
+# ==============================
+# OS generated files
+# ==============================
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+
+# ==============================
+# Editor / IDE
+# ==============================
+
+.vscode/
+.idea/
+
+*.swp
+*.swo
+*~
+*.tmp
+
+
+# ==============================
+# Logs / cache
+# ==============================
+
+*.log
+.cache/
+tmp/
+temp/
+
+
+# ==============================
+# Neovim
+# ==============================
+
+# Local/state data should not be stored in dotfiles
+.nvim/
+.nvimlog
+
+# Optional local settings
+lua/local.lua
+lua/local/
+
+
+# ==============================
+# Shell
+# ==============================
+
+.zsh_history
+.bash_history
+
+.zcompdump*
+.zsh_sessions/
+
+
+# ==============================
+# Secrets
+# ==============================
+
+.env
+.env.*
+!.env.example
+
+*.pem
+*.key
+*.crt
+
+credentials
+credentials.*
+secrets
+secrets.*
+
+
+# ==============================
+# mise
+# ==============================
+
+# Keep mise.toml / .mise.toml
+# Ignore local-only config
+mise.local.toml
+.mise.local.toml
+
+
+# ==============================
+# Local machine specific config
+# ==============================
+
+*.local
+*.local.*
+local/
+private/
+
+
+# ==============================
+# Build / generated files
+# ==============================
+
+dist/
+build/
+target/
+node_modules/
+
+__pycache__/
+*.pyc
