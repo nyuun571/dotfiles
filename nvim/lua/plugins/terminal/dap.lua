@@ -122,7 +122,15 @@ return {
         dap.adapters.gdb = {
           type = "executable",
           command = "gdb",
-          args = { "--interpreter=dap", "--eval-command", "set print pretty on" },
+          -- Keep both fork inferiors in GDB. DAP clients may not expose
+          -- all inferior-switching operations, so verify with GDB directly.
+          args = {
+            "--interpreter=dap",
+            "--eval-command", "set print pretty on",
+            "--eval-command", "set follow-fork-mode parent",
+            "--eval-command", "set detach-on-fork off",
+            "--eval-command", "set follow-exec-mode new",
+          },
         }
 
         dap.configurations.c = {
